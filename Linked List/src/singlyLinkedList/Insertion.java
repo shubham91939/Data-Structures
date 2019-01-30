@@ -34,7 +34,7 @@ public class Insertion
 		}
 		
 		Node n = head;
-		while(n!=null)
+		while(n.next!=null)
 		{
 			n=n.next;
 		}
@@ -55,6 +55,16 @@ public class Insertion
 		prevNode.next= newNode;
 	}
 	
+	public void print()
+	{
+		Node n=head;
+		while(n!=null)
+		{
+			System.out.println(n.Data);
+			n=n.next;
+		}
+	}
+	
 	public static void main(String[] args) 
 	{
 		Insertion llist = new Insertion();
@@ -63,7 +73,6 @@ public class Insertion
 		llist.append(4);
 		llist.append(5);
 		llist.insert(llist.head.next,3);
-		
+		llist.print();
 	}
-
 }
