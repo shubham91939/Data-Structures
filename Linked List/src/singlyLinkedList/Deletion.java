@@ -2,8 +2,6 @@
 
 package singlyLinkedList;
 
-import singlyLinkedList.NodeDeletion.Node;
-
 public class Deletion 
 {
 	Node head;
