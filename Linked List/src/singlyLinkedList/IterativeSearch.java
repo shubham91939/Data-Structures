@@ -1,7 +1,8 @@
 package singlyLinkedList;
 
-public class LinkedListDeletion 
+public class IterativeSearch
 {
+
 	Node head;
 	
 	static class Node
@@ -15,35 +16,31 @@ public class LinkedListDeletion
 		}
 	}
 	
-	public void printLinkedList()
+	public void search(int a)
 	{
 		Node n=head;
 		while(n!=null)
 		{
-			System.out.println(" " + n.Data + "");
+			if(n.Data==a)
+			{
+				System.out.println("Yes");
+			}
 			n=n.next;
 		}
 	}
 	
-	public void Delete()
-	{
-		head=null;
-	}
-	
 	public static void main(String[] args) 
 	{
-		LinkedListDeletion llist = new LinkedListDeletion();
+		IterativeSearch llist= new IterativeSearch();
+		
 		llist.head = new Node(1);
 		Node second = new Node(2);
 		Node third = new Node(3);
 		
 		llist.head.next = second;
 		second.next = third;
-		
-		System.out.println("Linked List");
-		llist.printLinkedList();
-		System.out.println("Deleting Linked List");
-		llist.Delete();
-		System.out.println("Linked List Deleted");	
+	
+		llist.search(3);
 	}
+
 }
