@@ -16,7 +16,7 @@ public class Length
 		}
 	}
 	
-	public int length()
+	public static int length() //this function needs to be static in order to be called from the 'main' function and here 'main' is a static function and length() is not.So main will not be able to call length(). As one static function can call another static function. Thus 'static' keyword needs to be added in front of length() function so 'main' function can call it. 
 	{
 		int count=0;
 		Node n=head;
